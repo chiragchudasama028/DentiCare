@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Alkalami';
+    src: url('Alkalami-Regular.woff2') format('woff2'),
+        url('Alkalami-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gemunu Libre';
+    src: url('GemunuLibre-Bold.woff2') format('woff2'),
+        url('GemunuLibre-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gemunu Libre';
+    src: url('GemunuLibre-ExtraLight.woff2') format('woff2'),
+        url('GemunuLibre-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gemunu Libre';
+    src: url('GemunuLibre-ExtraBold.woff2') format('woff2'),
+        url('GemunuLibre-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gemunu Libre';
+    src: url('GemunuLibre-SemiBold.woff2') format('woff2'),
+        url('GemunuLibre-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gemunu Libre';
+    src: url('GemunuLibre-Medium.woff2') format('woff2'),
+        url('GemunuLibre-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gemunu Libre';
+    src: url('GemunuLibre-Regular.woff2') format('woff2'),
+        url('GemunuLibre-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gemunu Libre';
+    src: url('GemunuLibre-Light.woff2') format('woff2'),
+        url('GemunuLibre-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
