@@ -18,6 +18,7 @@ body{
     --secondry-font:'Jost';
     --tertiary-font:'Gemunu Libre';
     --gutter-with:-15px;
+    --gutter-left:15px
 }
 .container{
     width: 1140px;
@@ -27,8 +28,9 @@ body{
 }
 .row{
     display: flex;
-    justify-content: space-around;
-    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
 }
 a{
     text-decoration: none;
@@ -38,7 +40,8 @@ ul , ol{
     list-style: none;
 }
 img{
-    display: inline-block;
+    display: block;
+    max-width: 100%;
 }
 span{
     display: inline-block;
@@ -137,58 +140,102 @@ p{
     padding-left: var(--gutter-left);
     padding-right: var(--gutter-right);
 }
+.align-content-center{
+    align-content: center;
+}
+.align-content-flex-start{
+    align-content: flex-start;
+}
+.align-content-flex-end{
+    align-content: flex-end;
+}
+.align-content-space-around{
+    align-content: space-around;
+}
+.align-content-space-between{
+    align-content: space-between;
+}
+.align-content-stretch{
+    align-content: stretch;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-flex-start{
+    justify-content: flex-start;
+}
+.justify-content-flex-end{
+    justify-content: flex-end;
+}
+.justify-content-space-between{
+    justify-content: space-between;
+}
+.justify-content-space-around{
+    justify-content: space-around;
+}
+.justify-content-space-evenly{
+    justify-content: space-evenly;
+}
+.align-items-center{
+    align-items: center;
+}
+.align-items-flex-start{
+    align-items: flex-start;
+}
+.align-items-flex-end{
+    align-items: flex-end;
+}
+.align-items-stretch{
+    align-items: stretch;
+}
+.align-items-baseline{
+    align-items: baseline;
+}
 .py-100{
     padding-top:100px;
     padding-bottom:100px;
 }
 .main-navbar{
-    position: relative;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
 }
 .main-nav{
     background-color: var(--primry-color);
-}
-.main-nav .row{
-    align-items: center;
 }
 .main-nav .logo img{
     width: 150px;
 }
 .call-time{
-    margin-left: auto;
+    padding: 8PX 0PX;
 }
-.call-time div{
-    padding: 4px;
-}
-.call-time i{ 
-    font-size: 28px;
-    color: var(--secondry-color);
-    margin-right: 10px;
+.call-time i{
+    color: var(--white-color);
+    font-size: 16px;
+    padding-right:8px;
 }
 .call-time span , .call-time p{
-    font-size: 18px;
+    font-size: 14px;
     color: var(--white-color);
     text-transform: uppercase;
-    margin-bottom: 4px;
+    margin-right: 8px;
 }
 .call-time p{
     font-size: 12px;
 }
 .nav-bar{
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    background-color:transparent;
+    background-color: BLACK;
     box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
-.nav-bar .row{
-    align-items: center;
+nav{
+    margin-left: auto;
 }
 nav ul{
     display: flex;
 }
 nav ul li{
     padding: 15px 0;
-    padding-right: 30px;
+    padding-left: 30px;
 }
 nav ul li a span{
     color: var(--white-color);
@@ -247,10 +294,15 @@ nav ul li a span i{
     visibility: visible;
     opacity: 1;
 }
+.dropdown-menu li{
+    padding: 15px 0;
+    padding-left: 30px;
+
+}
 /* main */
 /* benar */
 .baner{
-    padding-top: 150px; 
+    padding-top: 250px; 
     padding-bottom: 350px;
     background-image: url('../img/professional-dentist-tools-dental-office.jpg');
     background-position:  top center;
@@ -305,7 +357,7 @@ nav ul li a span i{
     bottom:10%;
     transform: translate(-50%);
     padding: 20px 10px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.153);
     backdrop-filter: blur(10px);
 }
 .contact-text{
@@ -317,14 +369,14 @@ nav ul li a span i{
     border: none;
 }
 .contact-text .title .row{
-    justify-content: space-between;
+    justify-content: space-between
 }
 .contact-text .title{
     margin-bottom: 30px;
 }
 .contact-text .title h3{
     display: inline-block;
-    color: var(--font-color);
+    color: var(--white-color);
     font-size: 24px;
     text-transform: capitalize;
     font-family: var(--tertiary-font);
@@ -337,6 +389,9 @@ nav ul li a span i{
     background-color: var(--secondry-color);
     font-size: 18px;
     display: inline-block;
+}.contact-text .day-time .row{
+    justify-content: space-between;
+
 }
 .contact-text .day-time .icon{
     margin-right: 20px;
@@ -347,13 +402,13 @@ nav ul li a span i{
 }
 .contact-text .day-time .text p{
     font-family: var(--secondry-font);
-    color: var(--font-color);
+    color: var(--white-color);
     font-size: 14px;
     text-transform: uppercase;
     text-align: left;
 }
 .contact-text .day-time .text span{
-    color: var(--font-color);
+    color: var(--white-color);
     font-size: 22px;
     font-family: var(--secondry-font);
     font-weight: 300;
@@ -368,7 +423,6 @@ nav ul li a span i{
 }
 .we-Care .care-img .layer01 img{
     width: 100%;
-    filter: drop-shadow(2.5px 3px 5px rgba(14, 190, 255,0.5)); 
 }
 .we-Care .care-img .shap{
     position: absolute;
@@ -414,7 +468,7 @@ nav ul li a span i{
 }
 .list ul li{
     text-align: center;
-    padding: 30px;
+    /* padding: 20px; */
     margin:  0px 20px;
     border: 1px dotted #000;
     background-color: var(--primry-color);
@@ -423,8 +477,9 @@ nav ul li a span i{
 
 }
 .list ul li img{
-    width: 70PX;
+    width: 100%;
     display: block;
+    margin: 0 auto;
     margin-bottom: 20px;
 }
 .list ul li span{
@@ -443,7 +498,6 @@ nav ul li a span i{
     margin-bottom: 10px;
 }
 .offer .title p , .news.title p{
-    font-size: 22px;
     color: var(--font-color);
     font-weight: 500;
 }
@@ -454,9 +508,7 @@ nav ul li a span i{
 .offer .offer-img img , .news .offer-img img{
     width: 100%;
     margin-bottom: 10px;
-    filter: drop-shadow(2.5px 3px 5px rgba(14, 190, 255,0.5)); 
-
-
+    filter: blur(1px);
 }
 .offer .offer-img h3 , .news .offer-img h3{
     font-size: 28px;
@@ -477,7 +529,8 @@ nav ul li a span i{
 }
 .gallery .gallery-img{
     width: 100%;
-    height: 250px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: url('../img/h2-gallery-img-1-1-1300x650.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -517,11 +570,6 @@ nav ul li a span i{
 .our-services .title{
     margin-bottom: 0;
 }
-.our-services .title span{
-    font-size: 16px;
-    font-weight: 300;
-    font-family: var(--tertiary-font);
-}
 .our-services ul li{
     padding: 10px 0;
 }
@@ -538,7 +586,6 @@ nav ul li a span i{
 }
 .our-services .services-img img{
     width: 100%;
-    filter: drop-shadow(2.5px 3px 5px rgba(14, 190, 255,0.5)); 
 
 
 }
@@ -570,7 +617,6 @@ nav ul li a span i{
 }
 .excellence-defined .defined-img img{
     width: 100%;
-    filter: drop-shadow(2.5px 3px 5px rgba(14, 190, 255,0.5)); 
 
 
 }
@@ -591,6 +637,7 @@ nav ul li a span i{
 }
 /* logos-wrap */
 .logos-wrap{
+    width: 100%;
      background-color: var(--white-color);
 }
 .logos-wrap .row{
@@ -610,12 +657,11 @@ nav ul li a span i{
     padding: 20px;
     background-color: var(--white-color);
     border: 3px double #0ebeff;
-    filter: drop-shadow(2.5px 3px 5px rgba(14, 190, 255,0.5)); 
 
 
 }
 .logos-wrap ul li img{
-    width: 125px;
+    width: 100%;
     transform: scale(0.9);
     transition: all 0.5s ease;
 }
@@ -653,7 +699,6 @@ nav ul li a span i{
 }
 .contact-us .map{
     padding:  0PX 50PX;
-    filter: drop-shadow(2.5px 3px 5px rgba(14, 190, 255,0.5)); 
 
 
 }
@@ -673,7 +718,6 @@ nav ul li a span i{
     color: var(--white-color);
     padding: 20px;
     background-color: #0ebeff;
-    filter: drop-shadow(2.5px 3px 5px rgba(14, 190, 255,0.5)); 
 
 
 }
@@ -733,4 +777,5 @@ footer nav ul li span{
 .Working-hours , .quick-links ,.f-about{
     text-align: left;
     padding-left: 50px;
+    margin-bottom: 30px;
 }
