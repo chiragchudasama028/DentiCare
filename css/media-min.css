@@ -16,6 +16,7 @@
 @media(max-width:575px){
     .container{
         width: 100%;
+        padding: 0px 30px;
     }
     .flex-direction-column{
         flex-direction: column;
@@ -61,7 +62,7 @@
     }
     .w-1, .w-2, .w-3, .w-4, .w-5, .w-6, .w-7, .w-8, .w-9, .w-10, .w-11, .w-12{
         padding-left: 30px;
-        padding-right: 30px;
+       padding-right: 30px;
     }
     .btn{
         font-size: 12px;
@@ -81,6 +82,9 @@
         color: var(--block-color);
         font-size: 16px;
         line-height: 1.1;
+    }
+    .main-navbar .icone{
+        display: none;
     }
     .main-nav nav{
         display: none;
@@ -109,33 +113,23 @@
     .baner .title h2{
         font-size: 36px;
     }
-    .contact{
-        width: 100%;
-        padding: 0;
-        display: none;
-
+    .baner .contant .text{
+        padding: 10px 5px;
     }
-    .contact-2{
-        display: block;
+    .baner .contant .icon{
+        padding: 10px 5px;
     }
-    .contact-text{
-        margin: 0;
-        padding: 0;
-        border: none;
+    .baner .contant .text h3{
+        font-size: 18px;
     }
-    .contact-text .title{
-        margin-bottom: 0;
+    .baner .contant .icon i{
+        display:none;
     }
-    .contact-text .title h3{
-        margin-bottom: 20px;
-        font-size:18px;
+    .baner .contant .icon p{
+        font-size: 16px;
     }
-    .contact-text .title i{
-        background-color:transparent;
-        padding: 0;
-        margin-bottom: 20px;
-        color: var(--secondry-color);
-        font-size: 22px;
+    .baner .contant .text i{
+        display:none;
     }
     .we-Care .text{
         padding: 20px 0px 0px;
@@ -258,26 +252,26 @@
     .align-items-baseline-sm{
         align-items: baseline;
     }
-    
-    .main-navbar .time-date{
+    .main-navbar .icone{
         display: none;
     }
     .main-nav nav{
         display: none;
+
+    }
+    .main-navbar nav{
+        width:100%;
+    }
+    .main-navbar nav > ul{
+        flex-direction: column;
+    }
+    .dropdown-menu nav ul li .dropdown-menu{
+        flex-direction: column;
     }
     .toggle{
-        width: 30px;
-        height: 30px;
-        border: 1px solid #fff;
-        border-radius: 3px;
-        list-style: 50px;
         display: block;
         display: flex;
         justify-content: center;
-        align-items: center;
-        color:var(--white-color);
-        font-size: 16px;
-        margin-left: auto;
     }
     .baner .title{
         margin-bottom: 25px;
@@ -298,35 +292,26 @@
     .baner .btn{
         font-size: 12px;
     }
-    .contact{
-        width: 100%;
-        padding: 0;
-        display: none;
+    .baner .contant .text{
+        padding: 10px 5px;
+    }
+    .baner .contant .icon{
+        padding: 10px 5px;
+    }
+    .baner .contant .text h3{
+        font-size: 18px;
+    }
+    .baner .contant .icon i{
+        display:none;
+    }
+    .baner .contant .icon p{
+        font-size: 16px;
+    }
+    .baner .contant .text i{
+        display:none;
+    }
+   
 
-    }
-    .contact-2{
-        display: block;
-    }
-    .contact-text{
-        margin: 0;
-        padding: 0;
-        border: none;
-    }
-    .contact-text .title{
-        margin-bottom: 0;
-    }
-    .contact-text .title h3{
-        margin-bottom: 20px;
-        font-size:18px;
-    }
-    .contact-text .title i{
-        background-color:transparent;
-        padding: 0;
-        margin-bottom: 20px;
-        color: var(--secondry-color);
-        font-size: 22px;
-
-    }
     .we-Care .text{
         padding: 20px 0px 0px;
     }
@@ -445,8 +430,13 @@
     .main-navbar .time-date{
         display: block;
     }
+    
     .main-nav nav{
         display: block;
+        width: auto;
+    }
+    .main-navbar nav > ul{
+        flex-direction: row;
     }
     .toggle{
         display: none;
@@ -457,6 +447,18 @@
     .w-1, .w-2, .w-3, .w-4, .w-5, .w-6, .w-7, .w-8, .w-9, .w-10, .w-11, .w-12{
         padding-left: var(--gutter-left);
         padding-right: var(--gutter-right);
+    }
+    .main-navbar .icone{
+        display: flex;
+    }
+    .baner .contant .text h3{
+        font-size: 18px;
+    }
+    .baner .contant .icon i{
+        display: none;
+    }
+    .baner .contant .icon p{
+        font-size: 16px;
     }
 }
 
@@ -569,9 +571,15 @@
     }
     .baner .btn{
         font-size: 12px;
-    } 
-    .contact-text .title{
-        margin-bottom: 0;
+    }
+    .baner .contant .icon i{
+        display: inline-block;
+        font-size: 22px;
+    }
+    .baner .contant .text i{
+        display: inline-block;
+        font-size: 18px;
+        padding: 6px;
     }
     .w-1, .w-2, .w-3, .w-4, .w-5, .w-6, .w-7, .w-8, .w-9, .w-10, .w-11, .w-12{
         padding-left: var(--gutter-left);
@@ -677,13 +685,6 @@
     .align-items-baseline-xl{
         align-items: baseline;
     }
-    .contact{
-        display: block;
-
-    }
-    .contact-2{
-        display:none;
-    }
     .contact-text{
         padding: 25px;
         margin: 5px;
@@ -691,6 +692,27 @@
     }
     .excellence-defined .main-text {
         padding: 0px 20px;
+    }
+    .baner .contant .text{
+        padding: 30px;
+    }
+    .baner .contant .icon{
+        padding: 10px 30px 30px;
+    }
+    .baner .contant .text h3{
+        font-size: 22px;
+    }
+    .baner .contant .icon i{
+        display: inline-block;
+        font-size: 42px;
+    }
+    .baner .contant .icon p{
+        font-size: 24px;
+    }
+    .baner .contant .text i{
+        display: inline-block;
+        font-size: 22px;
+        padding: 10px;
     }
    
    
