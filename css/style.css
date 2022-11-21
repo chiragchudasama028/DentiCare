@@ -450,6 +450,12 @@ nav ul li a span i{
     text-align: center;
     z-index: 1;
 }
+.baner-1{
+    background-image: url('../img/hero-2.jpg');
+}
+.baner-3{
+    background-image: url('../img/hero-1.jpg');
+}
 .baner::after{
     position:absolute;
     content: '';
