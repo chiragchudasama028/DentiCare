@@ -3,16 +3,16 @@
     box-sizing: border-box;
 }
 body , html{
-    background-color: data-blast="color";
+    background-color: var(--secondry-bg-color);
     scroll-behavior: smooth;
 }
 :root{
-    --primry-color:#121f38;
+    --primry-color:#717171;
     --primry-bg-color:#121f38;
     --primry-color:#121f38;
-    --secondry-bg-color:rgba(179, 236, 255,0.3);
-    --secondry-color:#17A8D8;
-    --font-color:#212121;
+    --secondry-bg-color:#000000;
+    --secondry-color:#007ea8;
+    --font-color:#b6b6b6;
     --white-color:#fff;
     --block-color:#000;
     --primry-font:'Alkalami';
@@ -85,13 +85,12 @@ p{
     letter-spacing: 0.5px;
     line-height: 1.3;
     color: var(--block-color);
-    --data-blast:bgColor;
 }
 .btn{
     padding: 10px 20px;
     background-color: var(--secondry-color);
     display: inline-block;
-    color: var(--font-color);
+    color: var(--white-color);
     text-transform: capitalize;
     font-size: 14px;
     box-shadow: 2px 3px 5px 4px rgba(0, 0, 0,0.1);
@@ -315,7 +314,6 @@ p{
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    text-transform: capitalize;
 }
 .theme-switcher .light{
     background-color: var(--white-color);
@@ -442,7 +440,7 @@ nav ul li a span i{
 .baner{
     padding-top: 250px; 
     padding-bottom: 350px;
-    background-image: url('../img/professional-dentist-tools-dental-office.jpg');
+    background-image: url('../img/pexels-vinicius-wiesehofer-1130625.jpg');
     background-position:  top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -550,7 +548,7 @@ nav ul li a span i{
 }
 
 .we-Care{
-    background-color: var(--white-color);
+    background-color: var(--secondry-bg-color);
 }
 .we-Care .care-img{
     position: relative;
@@ -728,7 +726,7 @@ nav ul li a span i{
 }
 /* excellence-defined */
 .excellence-defined{
-    background-color: var(--white-color);
+    background-color: var(--secondry-bg-color);
 }
 .excellence-defined .main-text{
     padding: 0 30px;

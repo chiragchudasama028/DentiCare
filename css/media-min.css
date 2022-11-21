@@ -86,22 +86,20 @@
     .main-navbar .icone{
         display: none;
     }
-    .main-nav nav{
+    .main-navbar .icone{
         display: none;
     }
+    .main-nav nav{
+        width:100%;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
     .toggle{
-        width: 30px;
-        height: 30px;
-        border: 1px solid #000;
-        border-radius: 3px;
-        list-style: 50px;
         display: block;
         display: flex;
         justify-content: center;
-        align-items: center;
-        color:var(--white-color);
-        font-size: 16px;
-        margin-left: auto;
     }
     .baner .title{
         margin-bottom: 25px;
@@ -128,9 +126,6 @@
     .baner .contant .icon p{
         font-size: 16px;
     }
-    .baner .contant .text i{
-        display:none;
-    }
     .we-Care .text{
         padding: 20px 0px 0px;
     }
@@ -151,6 +146,12 @@
     }
     footer .text{
         margin-bottom: 50px;
+    }
+    .main-navbar nav{
+        width:100%;
+    }
+    .main-navbar nav > ul{
+        flex-direction: column;
     }
 
 }

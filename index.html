@@ -16,7 +16,9 @@
         <!-- webfont -->
         <link rel="stylesheet" href="css/all.min.css">
         <!-- stylesheet -->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css" id="switcher-link">
+        <!-- <link rel="stylesheet" href="css/drak.css" id="switcher-link"> -->
+        <link rel="stylesheet" href="css/owl.carousel.css">        
     </head>
     <body class="hide">
         <div id="preloader">
@@ -24,6 +26,35 @@
         </div>
         <div class="backtotop">
             <div class="back-btn"><img src="img/up-arrow.png" alt=""></div>
+        </div>
+        <div class="switcher"><i class="fa-solid fa-sliders"></i></div>
+        <div class="theme-switcher">
+            <a href="#" class="light" data-path="css/style.css">light</a>
+            <a href="#" class="drak" data-path="css/drak.css">drak</a>
+            <div>
+                <label for="bgcolor_">background color :-</label>
+                 <input type="color" id="bgcolor_">
+            </div>
+            <div>
+                <label for="bg-color_">section background color:-</label>
+                <input type="color" id="bg-color_">
+            </div>
+            <div>
+                <label for="maintitale_">title color :-</label>
+                <input type="color" id="maintitale_">
+            </div>
+            <div>
+                <label for="subtitle_">sub title :-</label>
+                <input type="color" id="subtitle_">
+            </div>
+            <div>   
+                <label for="paragraph_">paragraph color :-</label>
+                <input type="color" id="paragraph_">
+            </div>
+            <div class="input-btn">
+                <input type="button" id="colorButton" value="Click to Change Color" onclick="changcolor()">
+                <input type="button" value="cancel" class="Cancel">
+            </div>        
         </div>
         <header class="main-navbar">
             <div class="nav-bar">
@@ -191,65 +222,185 @@
             </div>
         </header>
         <main>
-            <section class="baner wow flipInX">
-                <div class="container">
-                    <div class="title">
-                        <span class="wow sli">dental care for...</span>
-                        <h2>Your new smile</h2>
-                        <p>We work toward creating youthful smiles for patients whose natural teeth require replacement.</p>
-                        <a href="#" class="btn">viwe our services</a>
-                    </div>
-                    <div class="contant">
-                        <div class="row">
-                            <div class="w-4">
-                                <div class="text">
-                                    <h3>working Hours</h3>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <div class="icon">
-                                    <div>
-                                        <i class="fa-regular fa-calendar"></i>
+            <div class="owl-carousel">
+                <section class="baner wow flipInX item">
+                    <div class="container">
+                        <div class="title">
+                            <span class="wow sli">dental care for...</span>
+                            <h2 id="chirag">Your new smile</h2>
+                            <p>We work toward creating youthful smiles for patients whose natural teeth require replacement.</p>
+                            <a href="#" class="btn">viwe our services</a>
+                        </div>
+                        <div class="contant">
+                            <div class="row">
+                                <div class="w-4">
+                                    <div class="text">
+                                        <h3>working Hours</h3>
+                                        <i class="fa-solid fa-arrow-right"></i>
                                     </div>
-                                    <div>
-                                        <p>mon-sat</p>
-                                        <span>9am-8pm</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-4">
-                                <div class="text">
-                                    <h3>working Hours</h3>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <div class="icon">
-                                    <div>
-                                        <i class="fa-regular fa-calendar"></i>
-                                    </div>
-                                    <div>
-                                        <p>mon-sat</p>
-                                        <span>9am-8pm</span>
+                                    <div class="icon">
+                                        <div>
+                                            <i class="fa-regular fa-calendar"></i>
+                                        </div>
+                                        <div>
+                                            <p>mon-sat</p>
+                                            <span>9am-8pm</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="w-4">
-                                <div class="text">
-                                    <h3>working Hours</h3>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </div>
-                                <div class="icon">
-                                    <div>
-                                        <i class="fa-regular fa-calendar"></i>
+                                <div class="w-4">
+                                    <div class="text">
+                                        <h3>working Hours</h3>
+                                        <i class="fa-solid fa-arrow-right"></i>
                                     </div>
-                                    <div>
-                                        <p>mon-sat</p>
-                                        <span>9am-8pm</span>
+                                    <div class="icon">
+                                        <div>
+                                            <i class="fa-regular fa-calendar"></i>
+                                        </div>
+                                        <div>
+                                            <p>mon-sat</p>
+                                            <span>9am-8pm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-4">
+                                    <div class="text">
+                                        <h3>working Hours</h3>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <i class="fa-regular fa-calendar"></i>
+                                        </div>
+                                        <div>
+                                            <p>mon-sat</p>
+                                            <span>9am-8pm</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                <section class="baner wow flipInX item">
+                    <div class="container">
+                        <div class="title">
+                            <span class="wow sli">dental care for...</span>
+                            <h2 id="chirag">Your new smile</h2>
+                            <p>We work toward creating youthful smiles for patients whose natural teeth require replacement.</p>
+                            <a href="#" class="btn">viwe our services</a>
+                        </div>
+                        <div class="contant">
+                            <div class="row">
+                                <div class="w-4">
+                                    <div class="text">
+                                        <h3>working Hours</h3>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <i class="fa-regular fa-calendar"></i>
+                                        </div>
+                                        <div>
+                                            <p>mon-sat</p>
+                                            <span>9am-8pm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-4">
+                                    <div class="text">
+                                        <h3>working Hours</h3>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <i class="fa-regular fa-calendar"></i>
+                                        </div>
+                                        <div>
+                                            <p>mon-sat</p>
+                                            <span>9am-8pm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-4">
+                                    <div class="text">
+                                        <h3>working Hours</h3>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <i class="fa-regular fa-calendar"></i>
+                                        </div>
+                                        <div>
+                                            <p>mon-sat</p>
+                                            <span>9am-8pm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="baner wow flipInX item">
+                    <div class="container">
+                        <div class="title">
+                            <span class="wow sli">dental care for...</span>
+                            <h2 id="chirag">Your new smile</h2>
+                            <p>We work toward creating youthful smiles for patients whose natural teeth require replacement.</p>
+                            <a href="#" class="btn">viwe our services</a>
+                        </div>
+                        <div class="contant">
+                            <div class="row">
+                                <div class="w-4">
+                                    <div class="text">
+                                        <h3>working Hours</h3>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <i class="fa-regular fa-calendar"></i>
+                                        </div>
+                                        <div>
+                                            <p>mon-sat</p>
+                                            <span>9am-8pm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-4">
+                                    <div class="text">
+                                        <h3>working Hours</h3>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <i class="fa-regular fa-calendar"></i>
+                                        </div>
+                                        <div>
+                                            <p>mon-sat</p>
+                                            <span>9am-8pm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-4">
+                                    <div class="text">
+                                        <h3>working Hours</h3>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                    <div class="icon">
+                                        <div>
+                                            <i class="fa-regular fa-calendar"></i>
+                                        </div>
+                                        <div>
+                                            <p>mon-sat</p>
+                                            <span>9am-8pm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
             <section class="we-Care py-100 wow slideInDown" id="about">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -321,7 +472,7 @@
                         <div class="w-4">
                             <div class="title wow fadeInUpBig">
                                 <h2>Our services</h2>
-                                <span>Proin gravida nibh vel velit auctor aliquet Est Aenean sollicitudin</span>
+                                <p>Proin gravida nibh vel velit auctor aliquet Est Aenean sollicitudin</p>
                             </div>
                             <ul class="wow fadeInUpBig">
                                 <li>
@@ -360,7 +511,7 @@
                     </div>
                 </div>
             </section>
-             <section class="excellence-defined py-100">
+             <section class="excellence-defined py-100" id="chanag-color">
                 <div class="container">
                     <div class="row flex-direction-column">
                         <div class="w-6 w-xs-12 w-sm-12 w-xl-5">
@@ -423,36 +574,6 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="logos-wrap py-100">
-                <div class="container">
-                    <div class="title wow fadeInUpBig">
-                        <h2>Our Partners in Progress</h2>
-                        <span>You are never fully dressed without a smile!</span>
-                    </div> 
-                <div class="row wow fadeInUpBig">
-                    <ul> 
-                        <li>
-                            <img src="img/dentalia-demo-logo-2.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/dentalia-demo-logo-3.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/dentalia-demo-logo-6.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/dentalia-demo-logo-8.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/dentalia-demo-logo.jpg" alt="">
-                        </li>
-                        <li>
-                            <img src="img/dentalia-demo-logo-4.jpg" alt="">
-                        </li>
-                    </ul>
-                </div>
-            </div>
             </section>
             <section class="contact-us py-100" id="contact-us">
                 <div class="container">
@@ -622,5 +743,18 @@
         <script src="js/wow.min.js"></script>
         <script src="js/jquery-3.6.1.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/owl.carousel.js"></script>
+        <script>
+       
+            $(document).ready(function(){
+                $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                items:1
+            });
+            });
+
+        </script>
     </body>
 </html>
