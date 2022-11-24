@@ -21,7 +21,7 @@ $(document).ready(function(){
     $(".switcher").click(function(){
         $(".theme-switcher").slideDown();
     });
-    $(".input-btn").click(function(){
+    $(".input-btn , .light , .drak").click(function(){
         $(".theme-switcher").slideUp();
     });
     $(".theme-switcher a").on("click",function(){
@@ -46,7 +46,7 @@ $(window).scroll(function(){
 function changcolor(){
     var color = document.getElementById('bgcolor_').value; 
     document.body.style.backgroundColor = color;
-    var color = document.getElementById('maintitale_').value; 
+    var color = document.getElementById('maintitale_').value;
     const maintitale = document.getElementsByTagName("h2");
     for (h2 of maintitale) {
          h2.style.color = color;
@@ -65,3 +65,111 @@ function changcolor(){
     document.getElementById('chanag-color').style.backgroundColor = color;
     document.getElementById('about').style.backgroundColor = color;
 };
+var counted = 0;
+$(window).scroll(function() {
+
+  var oTop = $('.counter').offset().top - window.innerHeight;
+  if (counted == 0 && $(window).scrollTop() > oTop) {
+    $('.count').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+
+          duration: 2000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+          }
+
+        });
+    });
+    counted = 1;
+  }
+
+});
+var cursor = document.querySelector('.cursor');
+var cursorinner = document.querySelector('.cursor2');
+var a = document.querySelectorAll('a');
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+});
+
+document.addEventListener('mousemove', function(e){
+  var x = e.clientX;
+  var y = e.clientY;
+  cursorinner.style.left = x + 'px';
+  cursorinner.style.top = y + 'px';
+});
+
+document.addEventListener('mousedown', function(){
+  cursor.classList.add('click');
+  cursorinner.classList.add('cursorinnerhover')
+});
+
+document.addEventListener('mouseup', function(){
+  cursor.classList.remove('click')
+  cursorinner.classList.remove('cursorinnerhover')
+});
+
+a.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursor.classList.add('hover');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursor.classList.remove('hover');
+  });
+})
+var animationDelay = 3500;
+ 
+animateHeadline($('.cd-headline'));
+ 
+function animateHeadline($headlines) {
+	$headlines.each(function(){
+		var headline = $(this);
+		//trigger animation
+		setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, animationDelay);
+		//other checks here ...
+	});
+}
+
+function hideWord($word) {
+	var nextWord = takeNext($word);
+	switchWord($word, nextWord);
+	setTimeout(function(){ hideWord(nextWord) }, animationDelay);
+}
+ 
+function takeNext($word) {
+	return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
+}
+ 
+function switchWord($oldWord, $newWord) {
+	$oldWord.removeClass('is-visible').addClass('is-hidden');
+	$newWord.removeClass('is-hidden').addClass('is-visible');
+}
+
+singleLetters($('.cd-headline.letters').find('b'));
+ 
+function singleLetters($words) {
+	$words.each(function(){
+		var word = $(this),
+			letters = word.text().split(''),
+			selected = word.hasClass('is-visible');
+		for (i in letters) {
+			letters[i] = (selected) ? '<i class="in">' + letters[i] + '</i>': '<i>' + letters[i] + '</i>';
+		}
+	    var newLetters = letters.join('');
+	    word.html(newLetters);
+	});
+}
