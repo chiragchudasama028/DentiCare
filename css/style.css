@@ -513,6 +513,8 @@ nav ul li a span i{
     font-size: 42px;
     font-family: var(--secondry-font);
     font-weight: 700;
+    transition: all 0.5s;
+
 } 
 .baner .title > span{
     color: var(--white-color);
@@ -808,6 +810,22 @@ nav ul li a span i{
 }
 /* news */
 .news{
+background-color: #0ebeff;
+}
+#particles-js{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.particles-js-canvas-el{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.news .title h2{
+    color: var(--white-color);
 }
 .news .offer-img{
     padding: 25px;
@@ -815,11 +833,15 @@ nav ul li a span i{
 .news .offer-img h3{
     font-size:24px;
     line-height: 1.5;
+    color: var(--white-color);
 }
 .news .offer-img span{
     color: var(--primry-color-100);
     margin-bottom: 10px;
     font-family: var(--secondry-font);
+}
+.news .btn{
+    background-color: var(--white-color);
 }
 /* logos-wrap */
 .logos-wrap{
@@ -891,7 +913,7 @@ nav ul li a span i{
     content: '';
     width: 100%;
     height: 100%;
-    background-color: var(--secondry-color);
+    /* background-color: var(--secondry-color); */
     top: 0;
     left: 0;
     opacity: 0.5;
@@ -905,10 +927,10 @@ nav ul li a span i{
     font-size: 52px;
     display: block;
     line-height: 1.2;
-    color: var(--secondry-color);
+    color: var(--secondry-color  );
 }
 .counter-text span{
-    color: var(--primary-color);
+    color: var(--font-color);
     text-transform: capitalize;
     font-weight: 400;
     font-size: 18px;
@@ -924,6 +946,21 @@ nav ul li a span i{
     background-color: var(--primary-color);
     top: 125%;
     left: 0;
+}
+.faq .q{
+    font-size:24px;
+    font-family: var(--primry-font);
+    padding: 10px 0px;
+    color: var(--primry-bg-color);
+    line-height: 1;
+    font-weight: 500;
+    
+}
+.faq .a{
+    padding: 10px;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-family: var(--secondry-font);
 }
 /* contact-us */
 .contact-us{

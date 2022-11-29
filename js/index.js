@@ -138,9 +138,7 @@ animateHeadline($('.cd-headline'));
 function animateHeadline($headlines) {
 	$headlines.each(function(){
 		var headline = $(this);
-		//trigger animation
 		setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, animationDelay);
-		//other checks here ...
 	});
 }
 
@@ -173,3 +171,20 @@ function singleLetters($words) {
 	    word.html(newLetters);
 	});
 }
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  items:1
+});
+});
+// Accordian
+var action="click";
+var speed="500";
+
+$(document).ready(function() {
+    $('li.q').on(action, function() {
+        $(this).next().slideToggle(speed).siblings('li.a').slideUp();
+    });
+});
